@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vlo-zZ-Lnz">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Login View Controller-->
+        <scene sceneID="lhh-Vh-A08">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="vlo-zZ-Lnz" customClass="LoginViewController" customModule="InohomTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiR-sg-Xrx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-dr-Z4X">
+                                <rect key="frame" x="166" y="412.33333333333331" width="61.333333333333343" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg6-sD-1GN">
+                                <rect key="frame" x="181" y="450" width="31" height="14.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoj-GL-f0t">
+                                <rect key="frame" x="60" y="479.33333333333331" width="273" height="49.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="N6Z-MG-Fag"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="accountsButtonAction:" destination="vlo-zZ-Lnz" eventType="touchUpInside" id="3wJ-2l-TrF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KqL-ex-q5y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uoj-GL-f0t" firstAttribute="leading" secondItem="KqL-ex-q5y" secondAttribute="leading" constant="60" id="68Y-91-Ibf"/>
+                            <constraint firstItem="KqL-ex-q5y" firstAttribute="trailing" secondItem="uoj-GL-f0t" secondAttribute="trailing" constant="60" id="6GT-iE-y5O"/>
+                            <constraint firstItem="hZb-dr-Z4X" firstAttribute="centerX" secondItem="yiR-sg-Xrx" secondAttribute="centerX" id="Gzy-7E-tCg"/>
+                            <constraint firstItem="uoj-GL-f0t" firstAttribute="top" secondItem="xg6-sD-1GN" secondAttribute="bottom" constant="15" id="KWU-47-99P"/>
+                            <constraint firstItem="hZb-dr-Z4X" firstAttribute="centerY" secondItem="yiR-sg-Xrx" secondAttribute="centerY" id="V32-15-DNJ"/>
+                            <constraint firstItem="xg6-sD-1GN" firstAttribute="centerX" secondItem="yiR-sg-Xrx" secondAttribute="centerX" id="WM0-Rl-sFz"/>
+                            <constraint firstItem="xg6-sD-1GN" firstAttribute="top" secondItem="hZb-dr-Z4X" secondAttribute="bottom" constant="10" id="uY1-Qb-u1c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountsButton" destination="uoj-GL-f0t" id="g9w-xP-BAx"/>
+                        <outlet property="inohomLabel" destination="hZb-dr-Z4X" id="FDI-G1-YOI"/>
+                        <outlet property="versionLabel" destination="xg6-sD-1GN" id="1m9-OL-JSf"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9B-cc-Zfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="281" y="11"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

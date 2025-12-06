@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
+    @IBOutlet weak var inohomLabel: UILabel!
+    @IBOutlet weak var accountsButton: UIButton!
+    @IBOutlet weak var versionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        inohomLabel.text = "inohom+"
+        versionLabel.text = "v.1.7.0"
+        accountsButton.titleLabel?.text = "Hesaplar"
     }
-
-
+    
+    @IBAction func accountsButtonAction(_ sender: Any) {
+        
+    }
 }
 
