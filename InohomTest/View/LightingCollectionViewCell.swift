@@ -9,4 +9,7 @@ import UIKit
 
 class LightingCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
 }

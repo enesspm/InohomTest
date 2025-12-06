@@ -14,5 +14,5 @@ struct LoginResponse: Codable {
     let error: String
     let isRequest: Bool
     
-//    {"id":792,"params":["demo"],"method":"OnAuthenticated","error":null,"is_request":true}
+//  {"id":792,"params":["demo"],"method":"OnAuthenticated","error":null,"is_request":true}
 }
